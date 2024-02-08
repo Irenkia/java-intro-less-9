@@ -79,7 +79,7 @@ public class ArrayListOwn<I extends Integer> implements OwnList {
     @Override
     public void add(Integer element) {
         if (pointer == ownList.length - 1) {
-            resize(ownList.length * 2);
+            resize(newLength);
         }
         ownList[pointer++] = element;
     }
@@ -99,7 +99,7 @@ public class ArrayListOwn<I extends Integer> implements OwnList {
         }
         Object temp;
         if (pointer == ownList.length - 1) {
-            resize(ownList.length * 2);
+            resize(newLength);
             temp = ownList[index];
             ownList[index] = element;
             ownList[pointer++] = temp;
