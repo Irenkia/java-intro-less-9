@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ArrayListOwn<I extends Integer> implements OwnList {
     public static void main(String[] args) {
-        ArrayListOwn<Integer> list = new ArrayListOwn<Integer>();
+        ArrayListOwn<Integer> list = new ArrayListOwn();
         System.out.println(list.getClass());
         System.out.println("Add elements in owm ArrayList");
         list.add(1);
